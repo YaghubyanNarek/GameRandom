@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*font-family: 'Roboto', sans-serif;*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+    user-select: none;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(img/main-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: rgba(0,0,0,0.7);
+    animation: backgroundMain 5s linear infinite;
+}
+
+@keyframes backgroundMain{
+    0%,100%{
+        background-size: 100%;
+    }
+    50%{
+        background-size: 120%;
+    }
+}
+
+.game__start{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:80px;
+}
+
+.game__btn{
+    width: 170px;
+    height: 40px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    border: none;
+    border: 2px solid teal;
+    background: transparent;
+    color: white;
+    transition: .5s;
+}
+
+.game__btn:hover , .btn:hover{
+    box-shadow: 0 0 0 40px inset teal;
+}
+
+.game{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    background: url(img/main-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: rgba(0,0,0,.7);
+    animation: backgroundMain 5s linear infinite;
+    transition: .5s;
+}
+
+
+.gaming{
+    top: 0;
+}
+
+.reply{
+    font-size: 30px !important;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.game__container{
+    max-width: 1100px;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__game{
+    padding: 0 10px;
+    width: 660px;
+    height: 550px;
+    background: #416767;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center
+}
+
+.points{
+    width: 300px;
+    height: 550px;
+    background: #536262;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap:50px;
+    visibility:hidden;
+    opacity: 0;
+    transition: 3s;
+    border-radius: 30px;
+    box-shadow: 0 0 2px teal, 0 0 4px teal, 0 0 8px teal, 0 0 16px teal;
+}
+
+.pointsDisplay{
+    visibility: visible;
+    opacity: 1;
+}
+
+.pointsItem{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    
+}
+
+.item{
+    width: 72px;
+    height: 60px;
+    background: #212121;
+    box-shadow: -5px 5px 5px black;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: black;
+    
+}
+
+.item:active{
+    transform: scale(.9);
+}
+
+.addClassItem{
+    transform: scale(.9) rotateY(360deg);
+    background: #54d9d9;
+    pointer-events: none;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scale(0);
+    transition: .5s;
+}
+
+.mainscale{
+    transform: scale(1);
+}
+
+.playThen{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) ;
+    z-index: 2;
+    background: transparent;
+    border: 7.5px double teal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.playThen h2{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    text-transform: capitalize;
+}
+
+.play__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 60px;
+}
+
+.btn{
+    width: 150px;
+    height: 40px;
+    border-radius: 25px;
+    background: transparent;
+    border: none;
+    border: 2px solid teal;
+    transition: .65s;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
